@@ -5,8 +5,7 @@
 AudioEngine::AudioEngine(QObject *parent): QObject{parent}
 {
 
-    audioOutput=new QAudioOutput(this);
-    player=new QMediaPlayer(this);
+    //Code intentionally omitted to protect intellectual property//
     player->setAudioOutput(audioOutput);
 
     audioOutput->setVolume(1.0);
@@ -15,7 +14,7 @@ AudioEngine::AudioEngine(QObject *parent): QObject{parent}
         (player, &QMediaPlayer::mediaStatusChanged,
          this,&AudioEngine::handleMediaStatus);
 
-    beatTimer=new QTimer(this);
+    //Code intentionally omitted to protect intellectual property//
 
     connect(beatTimer,&QTimer::timeout,this,[this]()
     {
