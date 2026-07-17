@@ -85,7 +85,8 @@ Built with C++, Qt 6, and QML, Lehra_App-Anish_Savkar delivers a smooth, respons
 ## Feedback/Support
 
 If you discover a bug or have a suggestion, feel free to contact- <br>
-lehraapp.anish.support@gmail.com <br>
+lehraapp.anish.support@gmail.com <br> 
+  <br>
 Responses may take 2-3 business days :) <br>
 
 ---
