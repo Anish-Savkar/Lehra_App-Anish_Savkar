@@ -17,7 +17,7 @@ class AudioEngine : public QObject
 public:
     explicit AudioEngine(QObject *parent = nullptr);
 
-    void setTaalManager(TaalManager *m);
+   //Code intentionally omitted to protect intellectual property.//
     void updatePlaybackRate();
 
     int currentBeat()const {return m_currentBeat;}
@@ -32,7 +32,7 @@ public slots:
     void setCurrentBPM(int x);
 
     private:
-    TaalManager *k=nullptr;
+    //Code intentionally omitted to protect intellectual property//
     QMediaPlayer *player;
     QAudioOutput *audioOutput;
     void handleMediaStatus(QMediaPlayer::MediaStatus status);
