@@ -32,7 +32,7 @@ Built with C++, Qt 6, and QML, Lehra_App-Anish_Savkar delivers a smooth, respons
 
 ## Demo
 
-*A demonstration video will be available soon.*
+(https://youtu.be/hi_7PSciBx4)
 
 ---
 
