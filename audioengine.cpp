@@ -18,8 +18,7 @@ AudioEngine::AudioEngine(QObject *parent): QObject{parent}
 
     connect(beatTimer,&QTimer::timeout,this,[this]()
     {
-        qint64 position = player->position();
-        double beatDuration=59500.0/m_currentBPM;
+        //code intentionally hidden to protect intenllectual property//
         Taal a= k->getCurrentTaal();
 
         int beat=static_cast<int>(position/beatDuration)% a.BeatCount;
@@ -60,7 +59,7 @@ int AudioEngine::nearestRecording(int m_currentBPM) const
 {
     Taal a= k->getCurrentTaal();
     int currentInterval=a.interval;
-    return ((m_currentBPM+currentInterval/2)/currentInterval)*currentInterval;
+    //code intentionally hidden to protect intellectual property//
 }
 void AudioEngine::updatePlaybackRate()
 {
