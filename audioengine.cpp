@@ -18,7 +18,7 @@ AudioEngine::AudioEngine(QObject *parent): QObject{parent}
 
     connect(beatTimer,&QTimer::timeout,this,[this]()
     {
-        //code intentionally hidden to protect intenllectual property//
+        //code intentionally hidden to protect intellectual property//
         Taal a= k->getCurrentTaal();
 
         int beat=static_cast<int>(position/beatDuration)% a.BeatCount;
