@@ -5,7 +5,8 @@
 AudioEngine::AudioEngine(QObject *parent): QObject{parent}
 {
 
-    //Code intentionally omitted to protect intellectual property//
+    audioOutput=new QAudioOutput(this);
+    player=new QMediaPlayer(this);
     player->setAudioOutput(audioOutput);
 
     audioOutput->setVolume(1.0);
@@ -14,11 +15,12 @@ AudioEngine::AudioEngine(QObject *parent): QObject{parent}
         (player, &QMediaPlayer::mediaStatusChanged,
          this,&AudioEngine::handleMediaStatus);
 
-    //Code intentionally omitted to protect intellectual property//
+    beatTimer=new QTimer(this);
 
     connect(beatTimer,&QTimer::timeout,this,[this]()
     {
-        //code intentionally hidden to protect intellectual property//
+        qint64 position = player->position();
+        double beatDuration=59500.0/m_currentBPM;
         Taal a= k->getCurrentTaal();
 
         int beat=static_cast<int>(position/beatDuration)% a.BeatCount;
@@ -59,7 +61,7 @@ int AudioEngine::nearestRecording(int m_currentBPM) const
 {
     Taal a= k->getCurrentTaal();
     int currentInterval=a.interval;
-    //code intentionally hidden to protect intellectual property//
+    return ((m_currentBPM+currentInterval/2)/currentInterval)*currentInterval;
 }
 void AudioEngine::updatePlaybackRate()
 {
