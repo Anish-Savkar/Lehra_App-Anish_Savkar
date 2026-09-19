@@ -14,7 +14,12 @@ ApplicationWindow
 
     title: "Lehra"
 
-    //Code intentionally omitted to protect intellectual property.//
+    color: "#2D3033"
+    property bool darkMode: true
+    property color bgColor: darkMode ? "black" : "white"
+    property color textColor: darkMode ? "white" : "black"
+    property color cardColor: darkMode ? "black" : "white"
+    property color borderColor: darkMode ? "#2979FF" : "#2979FF"
 
     Rectangle
     {
