@@ -34,7 +34,8 @@ public slots:
     void setCurrentTaal(int index);
 
 private:
-   //Code intentionally omitted to protect intellectual property.//
+    QVector <Taal> taals; //append value put in struct
+    int currentTaalIndex=0;
 signals:
     void currentTaalChanged();
 };
