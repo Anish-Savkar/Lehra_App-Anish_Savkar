@@ -12,7 +12,8 @@ int main(int argc, char *argv[])
     TaalManager tm;
     audioEngine.setTaalManager(&tm);
     QQmlApplicationEngine engine;
-    //Code intentionally omitted to protect intellectual property//
+    engine.rootContext()->setContextProperty("audioEngine", &audioEngine);
+    engine.rootContext()->setContextProperty("tm", &tm);
 
     QObject::connect(
         &engine,
